@@ -1,0 +1,11 @@
+{
+  "name": "pnpm-7.29.2-issue",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "pnpm drupal-js-build --css"
+  },
+  "dependencies": {
+    "drupal-js-build": "https://github.com/AmazeeLabs/drupal-js-build"
+  }
+}
