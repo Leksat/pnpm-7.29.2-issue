@@ -37,3 +37,22 @@ jobs:
         run: pnpm i
       - name: Build
         run: pnpm build
+
+  pnpm_7_29_2__extend_node_path:
+    name: pnpm@7.29.2 with extend-node-path=true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 18
+      - name: Install pnpm
+        run: npm install -g pnpm@7.29.2
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Add extend-node-path=true
+        run: echo "extend-node-path=true" > .npmrc
+      - name: Install
+        run: pnpm i
+      - name: Build
+        run: pnpm build
