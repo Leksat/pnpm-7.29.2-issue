@@ -56,3 +56,20 @@ jobs:
         run: pnpm i
       - name: Build
         run: pnpm build
+
+  pnpm_7_29_3:
+    name: pnpm@7.29.3
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 18
+      - name: Install pnpm
+        run: npm install -g pnpm@7.29.3
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Install
+        run: pnpm i
+      - name: Build
+        run: pnpm build
